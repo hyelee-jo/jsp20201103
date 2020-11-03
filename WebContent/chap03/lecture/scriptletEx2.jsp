@@ -13,8 +13,10 @@
 <body>
 <%
 for (int i = 0; i < 5; i++) {
-	<h1>Lorem ipsum dolor.</h1>
 %>
+
+  <h1>Lorem ipsum dolor.</h1>
+  
 <%
 }
 %>
@@ -29,20 +31,31 @@ list.add("dbms");
 
 <ul>
 <%
-for(String item : list) {
+for (String item : list) {
 %>
 <li>
-<% out.print("item");%>
+<% out.print(item); %>
 </li>
 <%
 }
 %>
+
 </ul>
 
-
-
-
-
+<%
+boolean danger = true;
+%>
+<%
+if (danger) {
+%>
+<h1 class="text-danger">DANGER!!!!</h1>
+<%
+} else { 
+%>
+<h1 class="text-info">INFO~~~~~</h1>
+<%
+}
+%>
 
 </body>
 </html>
