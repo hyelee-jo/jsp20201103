@@ -141,7 +141,7 @@ select ename, salary, commission
 from employee
 where commission >=500;
 
-
+SELECT ename FROM employee WHERE eno = 7499;
 
 
 

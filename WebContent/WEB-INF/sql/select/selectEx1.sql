@@ -56,7 +56,7 @@ select
     distinct dno 
 from EMPLOYEE;
 
-
+SELECT loc FROM department WHERE dno = 10;
 
 
 
