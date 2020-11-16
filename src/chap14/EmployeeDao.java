@@ -150,7 +150,7 @@ public class EmployeeDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			// 6. statment 닫고
+			// 6. statement 닫고
 			try {
 				if (stmt != null) {
 					stmt.close();
