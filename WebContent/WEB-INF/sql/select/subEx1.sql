@@ -64,11 +64,36 @@ FROM employee
 GROUP By dno;
 
 --1)
+select ename, job
+from employee
+where job = (select job
+            from employee
+            where eno=7788);
 --2)
+select ename, job
+from employee
+where salary > (select salary
+               from employee
+               where eno=7499);
 --3)
+select ename, job, salary
+from employee
+where salary=(select
+             min(salary)
+             from employee);
 --4)
+select job, round(avg(salary),1)
+from employee
+group by job
+having round(avg(salary),1)=(select min(round(avg(salary),1))
+                            from employee
+                            group by job);
 --5)
-
+select ename, salary, dno
+from employee
+where salary in(select min(salary)
+               from employee
+               group by dno);
 
 
 
