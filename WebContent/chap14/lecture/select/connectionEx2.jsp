@@ -13,7 +13,7 @@ Connection con = null;
 Statement stmt = null;
 ResultSet rs = null;
 
-String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+String url = "jdbc:oracle:thin:@localhost:1521:orcl2";
 String id ="c##mydbms";
 String pw = "admin";
 con = DriverManager.getConnection(url, id, pw);
